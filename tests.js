@@ -3,19 +3,19 @@ const expect = chai.expect;
 
 describe("Colecciones en JS: Array", () => {
     it("Pueden crearse usando [ ]", () => {
-
+        let a = ["primero", 1, true];
         // crea un array "a" usando los corchetes []
 
         expect(Array.isArray(a)).to.be.true;
     })
     it("Pueden crearse usando new Array", () => {
-
+        let a = new Array("primero", 1, true);
         // crea un array "a" usando el constructor "new"
 
         expect(Array.isArray(a)).to.be.true;
     })
     it("Pueden estar vacíos o contener elementos", () => {
-
+        
         // crea un array que esté vacío y otro que no esté vacío
 
         expect(emptyArray).to.be.empty;
