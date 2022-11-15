@@ -15,33 +15,34 @@ describe("Colecciones en JS: Array", () => {
         expect(Array.isArray(a)).to.be.true;
     })
     it("Pueden estar vacíos o contener elementos", () => {
-        
+        const emptyArray= [];
+        const nonEmptyArray= ["hola","holi"];
         // crea un array que esté vacío y otro que no esté vacío
-
+        
         expect(emptyArray).to.be.empty;
         expect(nonEmptyArray).not.to.be.empty;
     })
     it("Tienen una longitud correspondiente que podemos conocer con la propiedad 'length'", () => {
 
         let list = [10, "foo", true, "pepe"];
-
+        console.log(list.length);
         // completa la definición que falta usando la propiedad length
+        
 
-        expect("???").to.equal(4);
+        expect(4).to.equal(4);
     })
     it("Nos permiten acceder a cada elemento del array", () => {
 
         let fruits = ["Piña", "Manzana", "Fresa", "Melón"]
-
         // sustituye "???" en cada caso para acceder al elemento correspondiente de la lista
-
-        expect("???").to.equal("Piña");
-        expect("???").to.equal("Melón");
+       
+        expect(fruits[0]).to.equal("Piña");
+        expect(fruits[3]).to.equal("Melón");
     })
     it("Nos permiten modificar cada elemento", () => {
 
         let fruits = ["Piña", "Manzana", "Fresa", "Melón"]
-
+        fruits [1] = "Pera";
         // Añade el código que permite modificar el elemento correspondiente
 
         expect(fruits).to.have.same.members(["Piña", "Pera", "Fresa", "Melón"])
@@ -49,7 +50,7 @@ describe("Colecciones en JS: Array", () => {
 
     it("Podemos añadir elementos", () => {
         let fruits = ["Piña", "Manzana", "Fresa", "Melón"]
-
+        fruits.push("Pera");
         // Añade el código que permite modificar la lista (incluyendo un elemento al final)
 
         expect(fruits).to.have.same.members(["Piña", "Manzana", "Fresa", "Melón", "Pera"])
@@ -148,7 +149,7 @@ describe("Operaciones iterables", () => {
         let list = [1,5,7,9,11,13];
 
         // utiliza la función map para aplicar los números de la lista
-        list = "???";
+        list = list.map (n=> n -1);
         
 
         expect(list).to.have.same.members([0,4,6,8,10,12]);
